@@ -1,0 +1,52 @@
+<div class="expense-detail-container" *ngIf="expense">
+    <h1>Expense Details</h1>
+    
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>{{ expense.description }}</mat-card-title>
+        <mat-card-subtitle>{{ expense.date | date }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="detail-row">
+          <span class="label">Amount:</span>
+          <span class="value amount">${{ expense.amount.toFixed(2) }}</span>
+        </div>
+        
+        <div class="detail-row">
+          <span class="label">Category:</span>
+          <span class="value">{{ expense.category }}</span>
+        </div>
+        
+        <div class="detail-row">
+          <span class="label">Description:</span>
+          <span class="value">{{ expense.description }}</span>
+        </div>
+        
+        <div class="detail-row">
+          <span class="label">Date:</span>
+          <span class="value">{{ expense.date | date:'fullDate' }}</span>
+        </div>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="editExpense()">
+          <mat-icon>edit</mat-icon> Edit
+        </button>
+        <button mat-raised-button color="warn" (click)="deleteExpense()">
+          <mat-icon>delete</mat-icon> Delete
+        </button>
+        <button mat-button (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon> Back to List
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <div class="expense-detail-container" *ngIf="!expense">
+    <mat-card>
+      <mat-card-content>
+        <p class="loading-message">Loading expense details...</p>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -1,0 +1,80 @@
+{
+  "expenses": [
+    {
+      "date": "2025-03-10",
+      "amount": 50.5,
+      "category": "Transportation",
+      "description": "Gas",
+      "id": "ec6f"
+    },
+    {
+      "id": "7e26",
+      "date": "2025-02-14",
+      "amount": 63,
+      "category": "Entertainment",
+      "description": "Movie night"
+    },
+    {
+      "id": "9df7",
+      "date": "2025-03-08",
+      "amount": 50,
+      "category": "Entertainment",
+      "description": "Philadelphia Flower Show"
+    },
+    {
+      "date": "2025-03-04",
+      "amount": 90,
+      "category": "Food",
+      "description": "Dinner",
+      "id": "1e58"
+    },
+    {
+      "id": "4320",
+      "date": "2025-03-04",
+      "amount": 14.5,
+      "category": "Transportation",
+      "description": "Tolls"
+    },
+    {
+      "date": "2025-03-12",
+      "amount": 25,
+      "category": "Food",
+      "description": "Lunch",
+      "id": "1e35"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Food"
+    },
+    {
+      "id": "2",
+      "name": "Transportation"
+    },
+    {
+      "id": "3",
+      "name": "Entertainment"
+    },
+    {
+      "id": "4",
+      "name": "Housing"
+    },
+    {
+      "id": "5",
+      "name": "Utilities"
+    },
+    {
+      "id": "6",
+      "name": "Healthcare"
+    },
+    {
+      "id": "7",
+      "name": "Personal"
+    },
+    {
+      "id": "8",
+      "name": "Education"
+    }
+  ]
+}

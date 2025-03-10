@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    color: #005cbb;
+ }
+
+ .mat-card-title { 
+    font-weight:bold !important;
+    color: #005cbb;
+ }
+
+ .mat-header-cell {
+   font-weight: bold;
+ }
+
+.mat-mdc-form-field.mat-mdc-form-field-type-mat-input .mat-mdc-text-field-wrapper,
+.mat-mdc-form-field.mat-mdc-form-field-type-mat-select .mat-mdc-text-field-wrapper,
+.mat-mdc-form-field .mat-mdc-form-field-flex .mdc-text-field--filled,
+textarea.mat-mdc-input-element {
+  background-color: white;
+}
+

@@ -1,0 +1,61 @@
+<div class="dashboard-container">
+    <h1>Expense Dashboard</h1>
+    
+    <div class="dashboard-summary">
+      <mat-card class="summary-card">
+        <mat-card-header>
+          <mat-card-title class="mat-card-title">Total Expenses</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h2>${{ totalExpenses.toFixed(2) }}</h2>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="summary-card">
+        <mat-card-header>
+          <mat-card-title class="mat-card-title">Total Number of Expenses</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h2>{{ expenses.length }}</h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    
+    <div class="dashboard-details">
+      <mat-card class="details-card">
+        <mat-card-header>
+          <mat-card-title class="mat-card-title">Expenses by Category</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item  *ngFor="let item of expensesByCategory">
+              <span class="item-category">{{ item.category }}:</span>
+              <span class="spacer"></span>
+              <span>${{ item.amount.toFixed(2) }}</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="details-card">
+        <mat-card-header>
+          <mat-card-title class="mat-card-title">Last Expenses*</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let expense of recentExpenses">
+              <div>
+                <p class="expense-description">{{ expense.description }}</p>
+                <p>{{ expense.date | date }} | {{ expense.category }} | ${{ expense.amount.toFixed(2) }}</p>
+              </div>
+            </mat-list-item>
+            <p class="note">*Last Expenses limited to the last 5 added</p>
+          </mat-list>
+          
+        </mat-card-content>
+        <mat-card-actions class="mat-card-actions">
+          <button mat-button class="view-all-expenses" routerLink="/expenses">View All Expenses</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

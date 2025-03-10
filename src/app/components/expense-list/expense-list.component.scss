@@ -1,0 +1,33 @@
+.expense-list-container {
+    padding: 20px;
+  }
+
+  h1 {
+    margin-top: 0;        
+    margin-bottom: 16px;    
+    font-size: 24px;        
+    line-height: 1.2;       
+  }
+  
+  .actions {
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .amount {
+    font-weight: bold;
+  }
+  
+  .no-data {
+    padding: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+  }
