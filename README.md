@@ -10,6 +10,23 @@ Step 2: Execute: npm install
 
 Step 3: Execute: npm run server (This will launch the Categories and Expenses API Services).
 
+The Terminal Window will display the following output once the API Services start up successfully
+
+```bash
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/expenses
+http://localhost:3000/categories
+
+Note: Enter ctrl-c then Y to Terminate the Expenses and Categories Enpoints ()
+Example: ^C^CTerminate batch job (Y/N)? Y
+```
+
 Step 4: Execute: ng serve (This will launch the ExpenseTracker application).
 
 ```bash
