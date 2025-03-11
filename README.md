@@ -2,11 +2,7 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 
-## Development server
-
-To start a local development server, run:
-
-## Start ExpenseTracker on local environment
+## Start ExpenseTracker on local development server
 
 Step 1: Clone the application
 
