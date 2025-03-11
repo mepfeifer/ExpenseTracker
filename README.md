@@ -24,10 +24,6 @@ http://localhost:3000/expenses
 http://localhost:3000/categories
 ```
 
-Note: Enter ctrl-c then Y to Terminate the Expenses and Categories Endpoints
-
-Example: ^C^CTerminate batch job (Y/N)? Y
-
 Step 4: Execute: ng serve (This will launch the ExpenseTracker application).
 
 ```bash
@@ -36,7 +32,13 @@ npm run server
 ng serve
 ```
 
-## IMPORTANT: If you accidentally close your terminal session for the Categories and Expenses API Services without stopping the API services
+## IMPORTANT: ExpenseTracker Expenses and Categories API Endpoint Procedures
+
+Note: Enter ctrl-c then Y to stop the Expenses and Categories Endpoint services when finished using the application
+
+Example: ^C^CTerminate batch job (Y/N)? Y
+
+## IMPORTANT: If you close your Terminal for the Categories and Expenses API Endpoints services without stopping the API Endpoint services
 
 You will need to use netstat to kill the tasks
 
