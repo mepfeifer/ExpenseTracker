@@ -6,7 +6,24 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 To start a local development server, run:
 
+## Start ExpenseTracker on local environment
+
+## Step 1: Launch the Categories and Expenses API Services by executing: npm run server
+
+## Step 2: Launch the ExpensesTracker application by executing: ng serve
+
+## IMPORTANT: If you accidentally close your terminal session for the Categories and Expenses API Services
+
+## You will need to use netstat to kill the tasks
+
+## For Windows OS: Launch Commmand Prompt with an Admin User account
+
+## Then execute the following command: netstat -ano | findstr :3000
+
+## Followed by the following command: taskkill /PID 12576 /F (if any tasks are active for port 3000)
+
 ```bash
+npm run server
 ng serve
 ```
 
