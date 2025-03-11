@@ -12,6 +12,12 @@ Step 3: Execute: npm run server (This will launch the Categories and Expenses AP
 
 Step 4: Execute: ng serve (This will launch the ExpenseTracker application).
 
+```bash
+npm install
+npm run server
+ng serve
+```
+
 ## IMPORTANT: If you accidentally close your terminal session for the Categories and Expenses API Services without stopping the API services
 
 You will need to use netstat to kill the tasks
@@ -23,11 +29,6 @@ Then execute the following command: netstat -ano | findstr :3000
 Followed by the following command: taskkill /PID (TaskId) /F (if any tasks are active for port 3000)
 
 Example: taskkill /PID 123456 /F
-
-```bash
-npm run server
-ng serve
-```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
