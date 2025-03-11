@@ -12,19 +12,21 @@ Step 1: Clone the application
 
 Step 2: Execute: npm install
 
-Step 3: Launch the Categories and Expenses API Services by executing: npm run server
+Step 3: Execute: npm run server (This will launch the Categories and Expenses API Services).
 
-Step 4: Launch the ExpensesTracker application by executing: ng serve
+Step 4: Execute: ng serve (This will launch the ExpenseTracker application).
 
-## IMPORTANT: If you accidentally close your terminal session for the Categories and Expenses API Services
+## IMPORTANT: If you accidentally close your terminal session for the Categories and Expenses API Services without stopping the API services
 
 You will need to use netstat to kill the tasks
 
-For Windows OS: Launch Commmand Prompt with an Admin User account
+For Windows OS: Launch a Commmand Prompt with an Admin User account
 
 Then execute the following command: netstat -ano | findstr :3000
 
-Followed by the following command: taskkill /PID 12576 /F (if any tasks are active for port 3000)
+Followed by the following command: taskkill /PID (TaskId) /F (if any tasks are active for port 3000)
+
+Example: taskkill /PID 123456 /F
 
 ```bash
 npm run server
