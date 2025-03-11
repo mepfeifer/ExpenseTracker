@@ -36,11 +36,11 @@
       "description": "Tolls"
     },
     {
-      "date": "2025-03-12",
-      "amount": 25,
-      "category": "Food",
-      "description": "Lunch",
-      "id": "1e35"
+      "date": "2025-03-10",
+      "amount": 65,
+      "category": "Healthcare",
+      "description": "Insurance Copay",
+      "id": "b5cc"
     }
   ],
   "categories": [
