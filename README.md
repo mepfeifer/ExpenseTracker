@@ -23,7 +23,7 @@ Endpoints:
 http://localhost:3000/expenses
 http://localhost:3000/categories
 
-Note: Enter ctrl-c then Y to Terminate the Expenses and Categories Enpoints ()
+Note: Enter ctrl-c then Y to Terminate the Expenses and Categories Endpoints
 Example: ^C^CTerminate batch job (Y/N)? Y
 ```
 
