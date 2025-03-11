@@ -32,6 +32,10 @@ npm run server
 ng serve
 ```
 
+Once the server is running, open your browser and navigate to `http://localhost:4200/`
+
+The application will automatically reload whenever you modify any of the source files.
+
 ## IMPORTANT: ExpenseTracker Expenses and Categories API Endpoint Procedures
 
 Note: Enter ctrl-c then Y to stop the Expenses and Categories Endpoint services when finished using the application
@@ -49,8 +53,6 @@ Then execute the following command: netstat -ano | findstr :3000
 Followed by the following command: taskkill /PID (TaskId) /F (if any tasks are active for port 3000)
 
 Example: taskkill /PID 123456 /F
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
