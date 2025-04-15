@@ -2,17 +2,31 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 
+Recommended Integrated Development Environment (IDE): Visual Studio Code
+
 ## Start ExpenseTracker on a local development server
 
-Step 1: Clone the application
+Step 1: Clone and open the application in IDE
 
 Step 2: Execute: npm install
 
-Step 3: Execute: npm run server (This will launch the Categories and Expenses API Services).
+Step 3: Launch a new Terminal Window and execute: npm run server (This will launch the Categories and Expenses API Services).
 
 The Terminal Window will display the following output once the API Services start up successfully
 
 ```bash
+ D:\Technical\Applications\Angular\expense-tracker> npm run server
+
+> expense-tracker@0.0.0 server
+> json-server --watch src/data/expense-tracker-db.json --port 3000
+
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching src/data/expense-tracker-db.json...
+
+♡⸜(˶˃ ᵕ ˂˶)⸝♡
+
 Index:
 http://localhost:3000/
 
@@ -24,12 +38,29 @@ http://localhost:3000/expenses
 http://localhost:3000/categories
 ```
 
-Step 4: Execute: ng serve (This will launch the ExpenseTracker application).
+Step 4: Launch a new Terminal Window and execute: ng serve (This will launch the ExpenseTracker application).
+
+The Terminal Window will display the following output once the ExpenseTracker Application starts up successfully
 
 ```bash
-npm install
-npm run server
-ng serve
+PS D:\Technical\Applications\Angular\expense-tracker> ng serve
+Component HMR has been enabled.
+If you encounter application reload issues, you can manually reload the page to bypass HMR and/or disable this feature with the `--no-hmr` command line option.
+Please consider reporting any issues you encounter here: https://github.com/angular/angular-cli/issues
+
+Initial chunk files | Names         |  Raw size
+polyfills.js        | polyfills     |  90.20 kB |
+main.js             | main          |  69.25 kB |
+styles.css          | styles        |   8.27 kB |
+
+                    | Initial total | 167.72 kB
+
+Application bundle generation complete. [3.385 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+  ➜  press h + enter to show help
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`
@@ -44,7 +75,7 @@ Example: ^C^CTerminate batch job (Y/N)? Y
 
 ## IMPORTANT: If you close your Terminal for the Categories and Expenses API Endpoints services without stopping the API Endpoint services
 
-You will need to use netstat to kill the tasks
+You will need to reboot or use netstat to kill the tasks
 
 For Windows OS: Launch a Commmand Prompt with an Admin User account
 

@@ -1,9 +1,9 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { ExpenseService } from '../../services/expense.service';
-import { CategoryService } from '../../services/category.service';
+import { ExpenseService } from '../../services/data/expense/expense.service';
+import { CategoryService } from '../../services/data/category/category.service';
+import { DateService } from '../../services/utility/date.service';
 import { Expense } from '../../models/expense.model';
 import { Category } from '../../models/category.model';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
@@ -37,19 +38,21 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 export class ExpenseFormComponent implements OnInit {
   private expenseService = inject(ExpenseService);
   private categoryService = inject(CategoryService);
+  private dateService = inject(DateService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private snackBar = inject(MatSnackBar);
 
   categories = signal<Category[]>([]);
   isEditMode = signal<boolean>(false);
- expenseId = signal<string | undefined>(undefined);
+  expenseId = signal<string | undefined>(undefined);
   formTitle = signal<string>('Add New Expense');
 
   dateControl = new FormControl<Date | null>(null, { validators: Validators.required });
   amountControl = new FormControl<string>('', {
     validators: [Validators.required, Validators.min(0.01)],
   });
+
   categoryControl = new FormControl<string>('', { validators: Validators.required, nonNullable: true });
   descriptionControl = new FormControl<string>('', { validators: Validators.required, nonNullable: true });
 
@@ -81,7 +84,7 @@ export class ExpenseFormComponent implements OnInit {
 
   loadExpense(id: string): void {
     this.expenseService.getExpenseById(id).subscribe((expense) => {
-      const dateObject = expense.date ? new Date(expense.date) : null;
+      const dateObject = expense.date ? new Date(expense.date) : new Date();
       const formattedAmount = expense.amount.toFixed(2);
 
       this.expenseForm.patchValue({
@@ -111,11 +114,12 @@ export class ExpenseFormComponent implements OnInit {
       return;
     }
   
-    const dateValue = this.dateControl.value;
-    const dateString = dateValue ? dateValue.toISOString().split('T')[0] : '';
-  
+    const dateControlValue = this.dateControl.value;
+    const now = new Date(); 
+    const expenseDate = dateControlValue ? this.dateService.initializeDateTime(dateControlValue, now) : now;
+
     const expense: Expense = {
-      date: dateString,
+      date: expenseDate,
       amount: parseFloat(this.amountControl.value ?? '0'),
       category: this.categoryControl.value ?? '',
       description: this.descriptionControl.value ?? '',

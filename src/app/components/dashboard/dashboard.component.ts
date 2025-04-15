@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExpenseService } from '../../services/expense.service';
-import { CategoryService } from '../../services/category.service';
+import { ExpenseService } from '../../services/data/expense/expense.service';
+import { CategoryService } from '../../services/data/category/category.service';
 import { Expense } from '../../models/expense.model';
 import { Category } from '../../models/category.model';
 import { CommonModule } from '@angular/common';

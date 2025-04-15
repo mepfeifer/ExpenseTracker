@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ExpenseService } from '../../services/expense.service';
+import { ExpenseService } from '../../services/data/expense/expense.service';
 import { Expense } from '../../models/expense.model';
 import { DeleteConfirmationComponent } from '../delete-confirmation/delete-confirmation.component';
 import { CommonModule } from '@angular/common';

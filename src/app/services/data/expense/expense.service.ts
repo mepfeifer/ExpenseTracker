@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Expense } from '../models/expense.model';
+import { map } from 'rxjs/operators';
+import { Expense } from '../../../models/expense.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,11 @@ export class ExpenseService {
   constructor(private http: HttpClient) { }
 
   getExpenses(): Observable<Expense[]> {
-    return this.http.get<Expense[]>(this.apiUrl);
+    return this.http.get<Expense[]>(this.apiUrl).pipe(
+      map(expenses => [...expenses].sort((a, b) => {
+        return new Date(a.date).getTime() - new Date(b.date).getTime();
+      }))
+    );
   }
 
   getExpenseById(id: string): Observable<Expense> {
@@ -35,7 +40,7 @@ export class ExpenseService {
     return this.http.get<Expense[]>(`${this.apiUrl}?category=${category}`);
   }
 
-  getExpensesByDateRange(startDate: string, endDate: string): Observable<Expense[]> {
+  getExpensesByDateRange(startDate: Date, endDate: Date): Observable<Expense[]> {
     return this.http.get<Expense[]>(`${this.apiUrl}?date_gte=${startDate}&date_lte=${endDate}`);
   }
 }

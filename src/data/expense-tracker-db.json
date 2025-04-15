@@ -1,46 +1,46 @@
 {
   "expenses": [
     {
-      "date": "2025-03-10",
-      "amount": 50.5,
-      "category": "Transportation",
-      "description": "Gas",
-      "id": "ec6f"
-    },
-    {
-      "id": "7e26",
-      "date": "2025-02-14",
-      "amount": 63,
-      "category": "Entertainment",
-      "description": "Movie night"
-    },
-    {
-      "id": "9df7",
-      "date": "2025-03-08",
-      "amount": 50,
-      "category": "Entertainment",
-      "description": "Philadelphia Flower Show"
-    },
-    {
-      "date": "2025-03-04",
-      "amount": 90,
+      "id": "318c",
+      "date": "2025-04-15T02:15:29.945Z",
+      "amount": 15,
       "category": "Food",
-      "description": "Dinner",
-      "id": "1e58"
+      "description": "Lunch"
     },
     {
-      "id": "4320",
-      "date": "2025-03-04",
-      "amount": 14.5,
+      "id": "f294",
+      "date": "2025-04-15T02:16:02.138Z",
+      "amount": 75.75,
       "category": "Transportation",
-      "description": "Tolls"
+      "description": "Fuel"
     },
     {
-      "date": "2025-03-10",
-      "amount": 65,
+      "id": "4520",
+      "date": "2025-04-12T02:16:44.124Z",
+      "amount": 24.25,
+      "category": "Entertainment",
+      "description": "Movie"
+    },
+    {
+      "id": "68d2",
+      "date": "2025-04-02T02:18:24.716Z",
+      "amount": 12,
+      "category": "Food",
+      "description": "Lunch"
+    },
+    {
+      "id": "95cd",
+      "date": "2025-04-05T02:19:24.746Z",
+      "amount": 9.25,
+      "category": "Transportation",
+      "description": "Toll"
+    },
+    {
+      "id": "0e23",
+      "date": "2025-04-09T02:20:38.264Z",
+      "amount": 50,
       "category": "Healthcare",
-      "description": "Insurance Copay",
-      "id": "b5cc"
+      "description": "Health Insurance Copay"
     }
   ],
   "categories": [
